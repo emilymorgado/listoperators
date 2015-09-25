@@ -218,8 +218,8 @@ def delete_third_and_seventh(input_list):
     True
 
     """
-    input_list[2] = []
-    input_list[5] = []
+    input_list[2:3] = []
+    input_list[5:6] = []
     pass
 
 
@@ -392,8 +392,14 @@ def custom_index(input_list, value):
     0
 
     """
+    index = 0
+    for item in input_list:
+        if item == value:
+            break
+        else:
+            index += 1
 
-    return 0
+    return index
 
 
 def custom_count(input_list, value):
@@ -407,8 +413,11 @@ def custom_count(input_list, value):
     2
 
     """
-
-    return 0
+    number_times = 0
+    for item in input_list:
+        if item == value:
+            number_times += 1
+    return number_times
 
 
 def custom_reverse(input_list):
